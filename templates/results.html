@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <div class="results-card">
+            <h2>Risk Level: <span class="{{ 'high-risk' if result.prediction == 1 else 'low-risk' }}">
+                {{ result.risk_level }}
+            </span></h2>
+            <p>Confidence: {{ "%.2f"|format(result.probability * 100) }}%</p>
+        </div>
+        <div class="buttons">
+            <a href="{{ url_for('predict') }}" class="btn">Make Another Prediction</a>
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+        </div>
+    </div>
+</body>
+</html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <div class="results-card">
+            <h2>Risk Level: <span class="{{ 'high-risk' if result.prediction == 1 else 'low-risk' }}">
+                {{ result.risk_level }}
+            </span></h2>
+            <p>Confidence: {{ "%.2f"|format(result.probability * 100) }}%</p>
+        </div>
+        <div class="buttons">
+            <a href="{{ url_for('predict') }}" class="btn">Make Another Prediction</a>
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+        </div>
+    </div>
+</body>
+</html> 
